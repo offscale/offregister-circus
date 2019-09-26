@@ -26,7 +26,7 @@ if __name__ == '__main__':
     to_funcs = lambda *paths: (partial(path.join, path.dirname(__file__), package_name, *paths),
                                partial(path.join, get_python_lib(prefix=''), package_name, *paths))
     _data_join, _data_install_dir = to_funcs('_data')
-    config_join, config_install_dir = to_funcs('config')
+    config_join, config_install_dir = to_funcs('configs')
 
     setup(
         name=package_name,
