@@ -17,7 +17,7 @@ def install_circus0(*args, **kwargs):
     kwargs.setdefault('APP_WORKING_DIR', '/var/projects/{name}'.format(name=kwargs['APP_NAME']))
     kwargs.setdefault('APP_LOGDIR', '/var/log/{name}'.format(name=kwargs['APP_NAME']))
     kwargs.setdefault('APP_ENV', None)
-    kwargs.setdefault('CMD_ARGS', None)
+    kwargs.setdefault('APP_CMD_ARGS', None)
     kwargs.setdefault('SHELL', '/bin/bash')
     kwargs.setdefault('remote_user', 'ubuntu')
 
@@ -33,7 +33,7 @@ def install_circus0(*args, **kwargs):
         working_dir=kwargs['APP_WORKING_DIR'],
         uname=uname,
         cmd=kwargs.get('APP_CMD'),
-        cmd_args=kwargs.get('APP_CMD_ARGS'),
+        cmd_args=kwargs['APP_CMD_ARGS'],
         shell=kwargs.get('APP_SHELL'),
         wsgi_file=kwargs.get('WSGI_FILE')
     )
