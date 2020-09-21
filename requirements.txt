@@ -1,1 +1,1 @@
-https://api.github.com/repos/offscale/offregister_python/zipball#egg=offregister_python
+https://api.github.com/repos/offscale/offregister-python/zipball#egg=offregister_python
