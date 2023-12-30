@@ -5,7 +5,7 @@ from fabric.operations import run, sudo
 from offregister_circus.shared import setup_circus
 
 
-def install_circus0(*args, **kwargs):
+def install_circus0(c, *args, **kwargs):
     uname = run("uname -v", quiet=True)
 
     for key in (

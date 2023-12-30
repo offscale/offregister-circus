@@ -1,8 +1,8 @@
 from __future__ import print_function
 
-from platform import python_version_tuple
+from sys import version_info
 
-if python_version_tuple()[0] == "2":
+if version_info[0] == 2:
     from ConfigParser import ConfigParser
 else:
     from configparser import ConfigParser
@@ -12,11 +12,11 @@ from os import path
 from sys import modules
 
 from fabric.context_managers import shell_env
-from fabric.contrib.files import upload_template, exists
-from fabric.operations import sudo, run, put, get
+from fabric.contrib.files import exists, upload_template
+from fabric.operations import get, put, run, sudo
 from offregister_python.ubuntu import install_venv0
 from pkg_resources import resource_filename
-from six import iteritems, StringIO
+from six import StringIO, iteritems
 
 configs_dir = partial(
     path.join,
