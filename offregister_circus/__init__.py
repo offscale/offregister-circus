@@ -9,7 +9,9 @@ import yaml
 
 __author__ = "Samuel Marks"
 __version__ = "0.0.2"
-__description__ = "This package follows the offregister specification to setup and serve circusd"
+__description__ = (
+    "This package follows the offregister specification to setup and serve circusd"
+)
 
 
 def get_logger(name=None):
